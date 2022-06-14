@@ -1,0 +1,11 @@
+.DS_Store
+.vscode
+.idea
+*.DS_Store
+*.__pychache
+__pycache__
+*.__pycache__
+bert_base
+bert-model
+data
+checkpoint

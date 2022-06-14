@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}
+    FEVER2
+{% endblock %}
+
+{% block head %}
+    <script src="{{ url_for('static',filename='jquery/jquery-3.6.0.min.js') }}"></script>
+    <!-- <script src="{{ url_for('static',filename='js/index2.js') }}"></script> -->
+{% endblock %}
+
+{% block body %}
+    <div class="container pt-3">
+        <!-- <p>
+            <a class="btn btn-primary text-dark" data-bs-toggle="collapse" href="#collapseExample" role="button"
+               aria-expanded="false" aria-controls="collapseExample" style="background-color:yellow">
+                notice
+            </a>
+        </p> -->
+        <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+                本事实验证系统支持对一条英文的声明（claim）进行证据检索并验证
+            </div>
+        </div>
+    </div>
+    {#    搜索框#}
+    <div class="container my-4">
+        <form>
+            <div class="input-group">
+                <input value="{{ claim }}" type="text" class="form-control" placeholder="enter your claim"
+                       aria-describedby="basic-addon1" name="claim2">
+                <button class="btn btn-outline-success ms-2" type="submit" id="btn-fever2">事实验证</button>
+            </div>
+        </form>
+    </div>
+    <!-- <div class="container" id="doc-res">
+        <div class="accordion-item my-4">
+            <h2 class="accordion-header" id="headingQuestion%20answering">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseQuestion" aria-expanded="true" aria-controls="collapseQuestion">
+                    Accordion Item #1
+                </button>
+            </h2>
+            <div id="collapseQuestion" class="accordion-collapse collapse show"
+                 aria-labelledby="headingQuestion%20answering"
+                 data-bs-parent="#doc-res">
+                <div class="accordion-body">
+                    <strong>This is the first item's accordion body.</strong> It is shown by default, until the
+                    collapse plugin adds the appropriate classes that we use to style each element. These classes
+                    control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                    modify any of this with custom CSS or overriding our default variables. It's also worth noting
+                    that just about any HTML can go within the <code>.accordion-body</code>, though the transition
+                    does limit overflow.
+                </div>
+                <div class="container my-4">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <select class="form-select d-inline " aria-label="Default select example">
+                                <option selected>选择检索出的证据</option>
+                                <option value="1">one</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-primary"> 句子检索</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container my-4">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="card">
+                                <div class="card-body">
+                                    <textarea class="form-control" name="" id="" rows="6"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-primary">事实验证</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="container">
+        <ol class="list-group list-group pt-2">
+            {% for evidence in evidences %}
+                <li class="list-group-item d-flex justify-content-between align-items-start">
+                    <div class="ms-2 me-auto mt-1" id="evidence_{{ loop.index }}">
+                        {#                        <div class="fw-bold">evidence</div>#}
+                        {{ evidence }}
+                    </div>
+                    <button class="btn btn-outline-success ms-2 btn-sm" type="submit" id="verify_{{ loop.index }}">验证
+                    </button>
+                    {#                    <span class="badge bg-primary rounded-pill bg-info">{{ result }}</span>#}
+                </li>
+            {% endfor %}
+        </ol>
+    </div> -->
+    <script src="{{ url_for('static',filename='js/index2.js') }}"></script>
+{% endblock %}
+
